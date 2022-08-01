@@ -14,13 +14,15 @@ import io.cucumber.java.en.When;
 
 public class Logina {
 	WebDriver driver;
-	@Given("^I navigate to the omayo website$")
+	@Given("^I navigate to the omayo   blog website$")
 	public void I_navigate_to_the_omayo_website()
 	{
 		System.setProperty("webdriver.chrome.driver", "D:\\Web\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("http://omayo.blogspot.com/");
+
 		driver.manage().window().maximize();
+		driver.manage().window().fullscreen();
 	}
 	@When("^I enter Username as \"([^\"]*)\" and Password as \"([^\"]*)\" into the fields$")
     public void i_enter_username_as_someusername_and_password_as_somepassword_into_the_fields(String Username, String Password) 
